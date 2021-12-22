@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form>
+        <div>
+            <label for ="name">Name</label>
+            <input id = "text" name ="name"placeholder="username">
+        </div>
+        <div>
+            <label for ="password">Password</label>
+            <input type = "text" name ="password" id ="password"placeholder = "password">
+        </div>
+        <div>
+            <label for = "age">Age</label>
+            <input type = "text" name ="Age" id ="age" min="1" max="3" step="1"> 
+        </div>
+        <div>
+            <label for ="Email">Email</label>
+            <input id ="Email" name ="Email" placeholder = "Email">
+        </div>
+        <div>favourite food</div>
+        <div>
+            <label for ="banana">BANANA</label>
+            <input type="checkbox" name ="banana" id= "banana">
+            <div>
+                Gender
+            </div>
+            <div>
+                <label for = "male">MALE</label> 
+                <input type ="radio" name="male" id="male" value ="male">
+
+                
+            </div>
+            <label for ="file">Choose File</label>
+            <input type ="file" id= "file"name ="file">
+        </div>
+        <label for ="eye color" id ="eye color"></label>
+        <select name ="eye color" id = "eye color" multiple></select>
+        <option value = "Green">Green</option>
+        <option value = "red">red</option>
+        <option value = "blue">blue</option>
+        <option value = "yellow">yellow</option>
+
+
+        </div>
+
+        <div>
+            <label for = "Bio">BIO</label>
+            <textarea id = "Bio" name ="Bio"></textarea>
+
+        </div>
+
+        <div> <button>RESET</button>
+        <button>SUBMIT</button>
+       </div>
+
+    </form>
+
+    <script>
+        const resultName = document.getElementById("result");
+        new URLSearchParams(window.location.search).foreach((value,name)=>
+        {resultName.append(`${name}:${value}`)
+        resultName.append(document.createElement("div"));
+    })
+
+        </script>
+
+    
+</body>
+</html>
